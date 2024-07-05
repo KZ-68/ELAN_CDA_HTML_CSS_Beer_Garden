@@ -1,0 +1,258 @@
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #C89C5C;
+    --h2-size: 30px;
+    --h3-size: 44px;
+    --h4-size: 18px;
+}
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+header {
+    width: 100%;
+}
+
+nav#nav-header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--primary-color);
+    background-color: #00000085;
+    padding: 25px 20px;
+}
+
+ul#links-center {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+#links-center li {
+    list-style-type: none;
+}
+
+#links-center li > a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+#socials-media-header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#socials-twitter {
+    width: 1em;
+}
+
+#socials-facebook {
+    width: 0.6em;
+}
+
+#socials-instagram  {
+    width: 1em;
+}
+
+#background-image-header {
+    background-image: url(../images/h5-revolution-img-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin: 0 auto;
+    height: 960px;
+    z-index: -2;
+}
+
+#slider-graphic {
+    position: absolute;
+    z-index: -1;
+    left: 37em;
+    top: 9em;
+    width: 40em;
+}
+
+#slider-graphic img {
+    width: 45em;
+}
+
+section#citation {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 30px 20px;
+    font-size: var(--h2-size);
+    font-weight: 600;
+    text-align: center;
+}
+
+#article1-image-rightside-background {
+    background-image: url(../images/h5-el-holder-img-1-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin: 0 auto;
+    height: 600px;
+    z-index: -2;
+}
+
+#traditions-article1 {
+    display: flex;
+    flex-direction: row;
+}
+
+#article1-leftside {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#article1-leftside h3 {
+   font-size: var(--h3-size);
+   font-weight: 300;
+}
+
+#article1-rightside {
+    width: 50%;
+    position: relative;
+    z-index: -2;
+}
+
+#article1-image-rightside {
+    position: absolute;
+    z-index: -1;
+    padding: 5em 18em;
+}
+
+#traditions-article2 {
+    display: flex;
+    flex-direction: row;
+}
+
+#article2-image-leftside-background {
+    background-image: url(../images/h5-el-holder-img-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin: 0 auto;
+    height: 600px;
+    z-index: -2;
+}
+
+#article2-leftside {
+    width: 50%;
+    position: relative;
+    z-index: -2;
+}
+
+#article2-image-leftside {
+    position: absolute;
+    z-index: -1;
+    padding: 5em 15em;
+}
+
+#article2-rightside {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#article2-rightside h3 {
+   font-size: var(--h3-size);
+   font-weight: 300;
+}
+
+#traditions-btn {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 15px 10px;
+    margin: 26px 375px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+}
+
+#article1-leftside p, #article2-rightside p {
+    font-family: 'Raleway';
+    line-height: 28px;
+}
+
+#article1-leftside h4, #article2-rightside h4 {
+    font-family: 'Time New Roman';
+    font-size: var(--h4-size);
+    padding-bottom: 10px;
+}
+
+#services {
+    display: flex;
+    flex-direction: row;
+}
+
+.services-images-wrapper {
+    width: 50%;
+    position: relative;
+    z-index: -2;
+}
+
+#services-images-background-1 {
+    background-image: url(../images/h5-gallery-img-1-477x477.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin: 0 auto;
+    height: 500px;
+    z-index: -2;
+}
+
+#services-images-background-2 {
+    background-image: url(../images/h5-gallery-img-2-477x477.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin: 0 auto;
+    height: 500px;
+    z-index: -2;
+}
+
+#services-images-background-3 {
+    background-image: url(../images/h5-gallery-img-3-477x477.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin: 0 auto;
+    height: 500px;
+    z-index: -2;
+}
+
+#services-images-background-4 {
+    background-image: url(../images/h5-gallery-img-4-477x477.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin: 0 auto;
+    height: 500px;
+    z-index: -2;
+}
