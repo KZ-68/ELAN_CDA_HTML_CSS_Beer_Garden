@@ -181,7 +181,7 @@ section#citation {
    font-weight: 300;
 }
 
-#traditions-btn {
+.traditions-btn {
     color: var(--primary-color);
     background-color: var(--secondary-color);
     padding: 15px 10px;
@@ -210,44 +210,29 @@ section#citation {
 .services-images-wrapper {
     width: 50%;
     position: relative;
-    z-index: -2;
+    z-index: 1;
 }
 
 #services-images-background-1 {
     background-image: url(../images/h5-gallery-img-1-477x477.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    margin: 0 auto;
-    height: 500px;
-    z-index: -2;
 }
 
 #services-images-background-2 {
     background-image: url(../images/h5-gallery-img-2-477x477.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    margin: 0 auto;
-    height: 500px;
-    z-index: -2;
 }
 
 #services-images-background-3 {
     background-image: url(../images/h5-gallery-img-3-477x477.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    margin: 0 auto;
-    height: 500px;
-    z-index: -2;
 }
 
 #services-images-background-4 {
     background-image: url(../images/h5-gallery-img-4-477x477.jpg);
+}
+
+#services-images-background-1, 
+#services-images-background-2, 
+#services-images-background-3, 
+#services-images-background-4 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
