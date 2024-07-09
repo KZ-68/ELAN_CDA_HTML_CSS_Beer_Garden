@@ -3,7 +3,8 @@
     --secondary-color: #C89C5C;
     --h2-size: 30px;
     --h3-size: 44px;
-    --h4-size: 18px;
+    --h4-size: 20px;
+    --h5-size: 18px;
 }
 
 
@@ -240,4 +241,40 @@ section#citation {
     margin: 0 auto;
     height: 500px;
     z-index: -2;
+}
+
+#menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 90px 120px;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-items h5 {
+    font-size: var(--h5-size);
+}
+
+.menu-icons {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.slide-color {
+    width: 50%;
+    height: 50%;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to top,rgb(255, 204, 0) 50%, rgb(255, 255, 255) 50%);
+    transition: background-position 1s;
+    position: absolute;
+    top: 23px;
+    left: 25px;
+    z-index: -1;
 }
