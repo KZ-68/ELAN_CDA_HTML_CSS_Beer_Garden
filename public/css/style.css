@@ -212,6 +212,7 @@ section#citation {
     width: 50%;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 #services-images-background-1 {
@@ -230,17 +231,21 @@ section#citation {
     background-image: url(../images/h5-gallery-img-4-477x477.jpg);
 }
 
-#services-images-background-1, 
-#services-images-background-2, 
-#services-images-background-3, 
-#services-images-background-4 {
-    background-size: cover;
+.services-images-background {
+    background-size: initial;
+    transition: scale 1s cubic-bezier(.29, 1.01, 1, -0.68);;
+    transform: scale(1);
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
     margin: 0 auto;
-    height: 500px;
+    height: 479px;
     z-index: -2;
+}
+
+.zoomed {
+    transition: scale 1s cubic-bezier(.29, 1.01, 1, -0.68);;
+    transform: scale(1.10);
 }
 
 #menu {
@@ -256,6 +261,7 @@ section#citation {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .menu-items h5 {
@@ -267,14 +273,30 @@ section#citation {
     position: relative;
 }
 
-.slide-color {
-    width: 50%;
-    height: 50%;
-    background-size: 100% 200%;
-    background-image: linear-gradient(to top,rgb(255, 204, 0) 50%, rgb(255, 255, 255) 50%);
+.hovered {
+    background-image: linear-gradient(to top,rgba(255, 204, 0, 0.302) 50%, rgba(255, 255, 255, 0) 50%);
     transition: background-position 1s;
+    background-position: 0 50%;
+    background-size: 100% 200%;
+}
+
+.plus-thin {
     position: absolute;
-    top: 23px;
-    left: 25px;
-    z-index: -1;
+    z-index: 2;
+    top: 40%;
+    left: 40%;
+    display: none;
+}
+
+@keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+}
+
+.rotating {
+    animation: rotating 2s linear
 }
