@@ -1,4 +1,5 @@
 let servicesImagesWrapper = document.querySelectorAll(".services-images-wrapper");
+let imagesBackground = document.querySelector(".services-images-background");
 
 servicesImagesWrapper.forEach(serviceImageWrapper => {
     let layer = document.createElement('div');
@@ -15,10 +16,16 @@ servicesImagesWrapper.forEach(serviceImageWrapper => {
     serviceImageWrapper.addEventListener('mouseover', () => {
         layer.style.opacity = 0.5
         layer.style.display = 'block'
+        serviceImageWrapper.lastElementChild.classList.add("zoomed")
+        let plusThinIcon = serviceImageWrapper.querySelector("img[class=plus-thin]")
+        plusThinIcon.style.display = "block"
     });
 
     serviceImageWrapper.addEventListener('mouseout', () => {
         layer.style.opacity = 0;
         layer.style.display = 'none'
+        serviceImageWrapper.lastElementChild.classList.remove("zoomed")
+        let plusThinIcon = serviceImageWrapper.querySelector("img[class=plus-thin]")
+        plusThinIcon.style.display = "none"
     });
 });
