@@ -1,10 +1,16 @@
-let menuIcons = document.querySelectorAll(".menu-icons");
+let menuItems = document.querySelectorAll(".menu-items");
 
-menuIcons.forEach(menuIcon => {
+
+menuItems.forEach(menuItem => {
+    let menuIcon = menuItem.querySelector("[class='menu-icons']");
+    let menuHeading = menuItem.querySelector("[class='menu-heading']");
+    
     menuIcon.addEventListener("mouseover", () => {
-        menuIcon.classList.add('hovered');
+        menuHeading.classList.add("menu-heading-hovered")
     })
     menuIcon.addEventListener("mouseout", () => {
-        menuIcon.classList.remove('hovered');
+        menuHeading.classList.remove("menu-heading-hovered")
     })
+    
 })
+
