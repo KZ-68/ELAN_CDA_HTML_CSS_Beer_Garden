@@ -366,10 +366,18 @@ section#section-map {
             linear-gradient(to bottom, rgb(0 0 0 / 85%) 21%, rgba(255, 255, 255, 0) 50%),
             rgb(0 0 0 / 75%) 
             linear-gradient(to top, rgba(0, 0, 0, 0.616) 24%, rgba(255, 255, 255, 0) 50%);
+    position: relative;
 }
 
-map {
+#map-transparent-layer {
+    min-height: 300px;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
 
+#map { 
+    height: 300px; 
+    z-index: -2;
 }
 
 #section-map h3 {
