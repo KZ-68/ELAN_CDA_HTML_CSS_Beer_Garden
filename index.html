@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="./public/css/style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
     <script src="https://kit.fontawesome.com/a076e75914.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
     <script type="text/javascript" src="./public/js/plus_animation.js" async></script>
     <script type="text/javascript" src="./public/js/menu_hover.js" async></script>
+    <script type="text/javascript" src="./public/js/leaftlet.js" async></script>
     <title>Beer Garden</title>
   </head>
   <body>
@@ -154,9 +161,12 @@
     </main>
     <footer>
       <section id="section-map">
-        <div id="map">
+        <div id="map-transparent-layer">
+          <div id="map">
 
+          </div>
         </div>
+        
         <h3>REVOLVER</h3>
       </section>
     </footer>
