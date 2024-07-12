@@ -1,9 +1,9 @@
 :root {
     --primary-color: #FFFFFF;
-    --secondary-color: #C89C5C;
+    --secondary-color: #9e6d22;
     --h2-size: 30px;
     --h3-size: 44px;
-    --h4-size: 20px;
+    --h4-size: 28px;
     --h5-size: 18px;
 }
 
@@ -50,6 +50,10 @@ ul#links-center {
     text-decoration: none;
 }
 
+#links-center li > a:hover {
+    color: var(--secondary-color)
+}
+
 #socials-media-header {
     display: flex;
     flex-direction: row;
@@ -66,6 +70,10 @@ ul#links-center {
 
 #socials-instagram  {
     width: 1em;
+}
+
+#socials-twitter:hover, #socials-facebook:hover, #socials-instagram:hover {
+    cursor: pointer;
 }
 
 #background-image-header {
@@ -192,6 +200,12 @@ section#citation {
     font-size: 18px;
 }
 
+.traditions-btn:hover {
+    cursor: pointer;
+    transition: background-color 1s ease;
+    background-color: #e0b16b;
+}
+
 #article1-leftside p, #article2-rightside p {
     font-family: 'Raleway';
     line-height: 28px;
@@ -215,6 +229,10 @@ section#citation {
     overflow: hidden;
 }
 
+.services-images-wrapper:hover {
+    cursor: pointer;
+}
+
 #services-images-background-1 {
     background-image: url(../images/h5-gallery-img-1-477x477.jpg);
 }
@@ -233,7 +251,6 @@ section#citation {
 
 .services-images-background {
     background-size: initial;
-    transition: scale 1s cubic-bezier(.29, 1.01, 1, -0.68);;
     transform: scale(1);
     background-repeat: no-repeat;
     background-position: center;
@@ -244,7 +261,7 @@ section#citation {
 }
 
 .zoomed {
-    transition: scale 1s cubic-bezier(.29, 1.01, 1, -0.68);;
+    transition: scale 1s cubic-bezier(.29, 1.01, 1, -0.68);
     transform: scale(1.10);
 }
 
@@ -264,7 +281,7 @@ section#citation {
     position: relative;
 }
 
-.menu-items h5 {
+.menu-heading {
     font-size: var(--h5-size);
 }
 
@@ -273,11 +290,28 @@ section#citation {
     position: relative;
 }
 
-.hovered {
-    background-image: linear-gradient(to top,rgba(255, 204, 0, 0.302) 50%, rgba(255, 255, 255, 0) 50%);
+.menu-icons:hover {
+    cursor: pointer;
+}
+
+.icon-hovered {
     transition: background-position 1s;
+    background-image: linear-gradient(to top,rgba(255, 204, 0, 0.302) 50%, rgba(255, 255, 255, 0) 50%);
     background-position: 0 50%;
     background-size: 100% 200%;
+}
+
+.menu-heading-hovered {
+    animation-name: heading-hovered;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-delay: 100ms;
+}
+
+@keyframes heading-hovered {
+    to {
+        color: var(--secondary-color)
+    }
 }
 
 .plus-thin {
@@ -285,18 +319,62 @@ section#citation {
     z-index: 2;
     top: 40%;
     left: 40%;
-    display: none;
+    visibility: hidden;
 }
 
-@keyframes rotating {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(180deg);
-    }
+.rotating-clockwise {
+    transition-duration: 0.8s;
+    transition-property: transform;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
 }
 
-.rotating {
-    animation: rotating 2s linear
+#parallax {
+    color: white;
+    text-align: center;
+    background-image: url(../images/h5-parallax-img-2.jpg);
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#parallax-top-layer {
+    min-height: 300px;
+    background: rgba(0, 0, 0, 0.164);
+    overflow: hidden;
+    padding: 120px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2#parallax-heading {
+    font-size: 64px;
+    font-weight: 300;
+    word-spacing: 8px;
+}
+
+#parallax-top-layer p {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 100;
+}
+
+section#section-map {
+    background: 
+            linear-gradient(to bottom, rgb(0 0 0 / 85%) 21%, rgba(255, 255, 255, 0) 50%),
+            rgb(0 0 0 / 75%) 
+            linear-gradient(to top, rgba(0, 0, 0, 0.616) 24%, rgba(255, 255, 255, 0) 50%);
+}
+
+map {
+
+}
+
+#section-map h3 {
+    padding: 20px 0px 10px 0px;
+    text-align: center;
+    color: white;
+    font-size: var(--h4-size);
 }
